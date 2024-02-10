@@ -1,0 +1,26 @@
+services:
+  proxy:
+    ports: 
+      - 8080:80
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock
+    tty: true
+    image: jwilder/nginx-proxy
+  nginx1:
+    environment:
+        - VIRTUAL_HOST=m
+    tty: true
+    stdin_open: true
+    image: nginx
+  nginx2:
+    environment:
+        - VIRTUAL_HOST=m
+    tty: true
+    stdin_open: true
+    image: nginx
+  nginx3:
+    environment:
+        - VIRTUAL_HOST=m
+    tty: true
+    stdin_open: true
+    image: nginx
