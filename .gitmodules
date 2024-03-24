@@ -1,0 +1,3 @@
+[submodule "TPDockerSampleApp"]
+	path = TPDockerSampleApp
+	url = https://github.com/barais/TPDockerSampleApp.git
